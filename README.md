@@ -1,2 +1,2 @@
-# Sistema-Convertidor-Moneda
-Ejemplo de un sistema web que permite convertir una cantidad de pesos a otra denominacion.
+# Ejercicios-programacion-PHP
+Ejemplos de programación desarrollados con php.
