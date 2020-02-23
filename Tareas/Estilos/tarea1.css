@@ -1,0 +1,24 @@
+div{
+    border: black solid 2px;
+    text-align: justify;
+    padding: 10px;
+}
+
+#caja1{
+    float: left;
+    width: 13em;
+    margin: 0px 10px 10px 0px;
+    background-color: yellow;
+}
+
+#caja2{
+    width: 13em;
+    float: right;
+    margin: 0px 0px 10px 10px;
+    background-color: lightgreen;
+}
+
+#caja3{
+    margin-top: 0px;
+}
+
