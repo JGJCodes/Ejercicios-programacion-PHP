@@ -7,7 +7,7 @@
 <body>
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="https://compubinario.com">CompuBinario</a>
+			<a class="navbar-brand" href="">Sistema</a>
 		</div>
 	</nav>
 	<div class="col-md-3"></div>
