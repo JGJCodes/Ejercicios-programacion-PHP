@@ -1,0 +1,3 @@
+En este tutorial crearemos como cargar imagenes con Ajax usando PHP y MYSQL. Este código cargará el archivo de imagen a la base de datos MySQLi con la ayuda de la solicitud ajax para evitar la actualización de la página. El código usa jQuery ajax para cargar el archivo de imagen al servidor MySQLi al evitar la actualización web y modificar las propiedades del elemento HTML para mostrar los datos de recepción. Este es un tipo de programa fácil de usar, siéntase libre de usarlo en su programa.
+
+Utilizaremos jQuery, un marco de JavaScript que está diseñado para simplificar el recorrido y la manipulación del árbol DOM HTML. Puede recuperar DOM y manipular cada propiedad de un elemento en función de diferentes criterios, como id, clase, etc.

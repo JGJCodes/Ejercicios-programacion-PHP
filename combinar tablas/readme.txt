@@ -1,0 +1,3 @@
+En este tutorial combinaremos dos tablas usando MySQLi. Este código fusionará las dos tablas existentes en el servidor MySQLi cuando el usuario haga clic en el botón de fusión. El código usa una función MySQLi SELECT () y agrega un parámetro LEFT JOIN para fusionar las dos tablas existentes en una que tenga la misma clave en ambas. Este es un tipo de programa fácil de usar, siéntase libre de usarlo en su programa.
+
+Usaremos PHP como lenguaje de secuencias de comandos que administrará un servidor de base de datos para manejar una gran cantidad de datos por transacción. Se describe como una tecnología avanzada que administra tanto el servidor como el bloque de control de su máquina.
