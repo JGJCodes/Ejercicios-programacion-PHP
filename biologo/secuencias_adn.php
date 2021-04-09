@@ -5,8 +5,6 @@
 	//variable que almacena el conjunto ordenado de bases adyacentes de mayor tamaño que es común en ambas secuencias
 	$bases_adyacentes = "";
  
- 
- 
 	/**Utilizamos dos ciclo FOR para realizar la búsqueda. El enfoque
       que utilizo es encontrar la mayor cadena en la variable adn1
       que tambien se encuentra en la variable adn2 
@@ -19,7 +17,7 @@
        que viene acotando por la derecha
     **/
  
-	for ($i = $adn1.length(); $i>=0; $i--) {    
+	for ($i = strlen($adn1); $i>=0; $i--) {    
             
         for ($j=0; $j<$i; $j++) {
             
@@ -32,8 +30,9 @@
 			2. que la longitud de la ultima coincidencia encontrada
 				sea menor a la longitud de la nueva coincidencia encontrada
             **/
-            if (str_contains($adn2,$subadn1) && strlen($bases_adyacentes)<strlen($subadn1) ) { 
-                $bases_adyacentes = $subadn1;//si se cumplen ambas condiciones almacenamos el nuevo valor                   
+            if (strstr($adn2,$subadn1) && strlen($bases_adyacentes)<strlen($subadn1) ) { 
+                //si se cumplen ambas condiciones almacenamos el nuevo valor   
+				$bases_adyacentes = $subadn1;                
             }     
         }        
     }
