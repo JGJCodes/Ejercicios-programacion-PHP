@@ -7,30 +7,37 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+<?php
+	require_once("form_teclado.php");
+?>
+
 <div class="container">
     <div style="height:50px;"></div>
     <div class="well" style="margin:auto; padding:auto; width:80%;">
-    <span style="font-size:25px; color:blue"><center>
-	<strong>Teclado Movil</strong></center></span>    
-        <span class="pull-left"><a href="#addnew" data-toggle="modal" class="btn btn-primary">
-		<span class="glyphicon glyphicon-plus"></span> Agregar Registro</a></span>
-        <div style="height:50px;"></div>
-        <?php
-            include('conn.php');
-            
-        ?>
+		<h3><strong>Teclado movil</strong></h3>
+			<div class="input-field">
+				<h3>Por favor rellene todos los campos</h3>
+				<form method="GET" action="" >
+				
+					<div class="form-group">
+						<label>Mensaje:</label>
+						<input type="text" class="form-control" name="formmsj" style="width:20em;"
+						value="<?php if(isset($msj)){echo $msj;} ?>" required pattern="^[a-zA-Z]{}"
+						placeholder="Hola mundo" />
+					</div>
+					
+					<div class="form-group">
+						<input type="submit" name="submit" class="btn btn-primary submitBtn" style="width:20em; margin:0;" />
+					</div>
+					
+					<div class="form-group">
+						<label ><?php echo $res; ?></label>
+						
+					</div>
+				</form>
+			</div>
+			
 		
-		<table class="table table-striped table-bordered table-hover">
-            <thead>
-                <th>Nombres</th>
-                <th>Apellidos</th>
-                <th>Direccion</th>
-                <th>Accion</th>
-            </thead>
-            <tbody>
-            
-            </tbody>
-        </table>
     </div>
     
 </div>

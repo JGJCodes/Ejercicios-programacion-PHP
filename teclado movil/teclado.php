@@ -1,12 +1,12 @@
 <?php
-// Ejemplo de solución para el reto 011
-// Por Morfeo, 28-05-2012
+// Ejemplo de solución para el reto
  
- function teclado_movil($mensaje_deseado){
+ function teclado_movil($mensaje){
  
     //Inicializar el teclado
     $key = array(); 
     $char = ord('a');
+	$respuesta="";
  
     // Guardo las teclas que corresponden a cada letra 
     for($tecla = 2; $tecla <=9; $tecla++){
@@ -23,11 +23,13 @@
     $key[ord(' ')] = array('tecla' => $tecla, 'pulsar' => $pulsar++);
  
     //Transformar string en array
-    $letras = str_split ($mensaje_deseado);
-    foreach($letras as $letra){
+    $letras = str_split ($mensaje);
+	$tecla_anterior=0;
+    
+	foreach($letras as $l){
         //Obtengo la tecla que le corresponde y la cantidad de pulsaciones
-        $tecla = $key[ord($letra)]['tecla'];
-        $pulsar = $key[ord($letra)]['pulsar']; 
+        $tecla = $key[ord($l)]['tecla'];
+        $pulsar = $key[ord($l)]['pulsar']; 
         //Si es la misma tecla que la anterior va espacio
         if($tecla == $tecla_anterior)
             $respuesta .= ' ';
@@ -41,15 +43,19 @@
     return $respuesta;
  }
  
- //Cantidad de casos
- $N = $_REQUEST['N'];
  
- //Mensajes
- $mensajes = $_REQUEST['mensajes'];
+ function inicio(){
+	//Cantidad de casos
+	$N = $_REQUEST['N'];
  
- for($i = 1; $i <= $N; $i++){
-    $mensaje_deseado= $mensajes[$i];
-    $respuesta = teclado_movil($mensaje_deseado);
-    echo "Caso #$i: $respuesta <br/>";
+	//Mensajes
+	$mensajes = $_REQUEST['mensajes'];
+ 
+	for($i = 1; $i <= $N; $i++){
+		$mensaje_deseado= $mensajes[$i];
+		$respuesta = teclado_movil($mensaje_deseado);
+		echo "Caso #$i: $respuesta <br/>";
+	} 
  }
+ 
 ?>
